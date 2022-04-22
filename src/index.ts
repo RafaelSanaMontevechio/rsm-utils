@@ -1,1 +1,3 @@
-export * from './functions/cep';
+import { maskCEP, unMaskCEP } from './functions/cep';
+
+export { maskCEP, unMaskCEP };

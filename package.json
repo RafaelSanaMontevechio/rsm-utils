@@ -1,22 +1,33 @@
 {
   "name": "rsm-utils",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "useful functions",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "files": [
     "lib /**/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config jestconfig.json",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RafaelSanaMontevechio/rsm-utils.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Util",
+    "CEP",
+    "Mask",
+    "unMask"
+  ],
   "author": "Rafael Sana Montevechio <rafael_sana@hotmail.com>",
   "license": "“MIT”",
   "bugs": {
@@ -24,7 +35,10 @@
   },
   "homepage": "https://github.com/RafaelSanaMontevechio/rsm-utils#readme",
   "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
     "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.6.3"
