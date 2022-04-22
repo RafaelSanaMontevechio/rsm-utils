@@ -1,0 +1,32 @@
+{
+  "name": "rsm-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "lib /**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RafaelSanaMontevechio/rsm-utils.git"
+  },
+  "keywords": [],
+  "author": "Rafael Sana Montevechio <rafael_sana@hotmail.com>",
+  "license": "“MIT”",
+  "bugs": {
+    "url": "https://github.com/RafaelSanaMontevechio/rsm-utils/issues"
+  },
+  "homepage": "https://github.com/RafaelSanaMontevechio/rsm-utils#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.6.3"
+  }
+}
